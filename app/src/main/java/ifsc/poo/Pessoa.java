@@ -5,7 +5,8 @@ public class Pessoa {
     private int idade;
 
     public void setNome(String nome) {
-        this.nome = nome;
+        if(!nome.isEmpty())
+            this.nome = nome;
     }
 
     public String getNome() {
@@ -13,7 +14,8 @@ public class Pessoa {
     }
 
     public void setIdade(int idade) {
-        this.idade = idade;
+        if(idade >= 0)
+            this.idade = idade;
     }
 
     public int getIdade() {
