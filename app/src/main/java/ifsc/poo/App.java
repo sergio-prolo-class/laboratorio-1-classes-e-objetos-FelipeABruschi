@@ -99,12 +99,22 @@ public class App {
         Produto geladeira = new Produto();
         Produto microondas = new Produto();
 
+        geladeira.setNome("Geladeira");
+        microondas.setNome("Micro ondas");
+
         geladeira.setPreco(832);
         microondas.setPreco(499);
+
+        System.out.println(geladeira.getPreco());
+        System.out.println(microondas.getPreco());
 
         geladeira.setDesconto(6);
         microondas.setDesconto(12);
 
         System.out.println(geladeira.getPreco());
+        System.out.println(microondas.getPreco());
+
+        System.out.println(geladeira.anuncio());
+        System.out.println(microondas.anuncio());
     }
 }

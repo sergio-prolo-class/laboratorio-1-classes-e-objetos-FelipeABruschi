@@ -15,12 +15,9 @@ public class Produto {
 
     public void setPreco(int preco){
         this.preco = preco;
-        if(this.desconto > 0){
-            this.preco -= preco * this.desconto / 100;
-        }
     }
 
-    public float getPreco(){
+    public int getPreco(){
         return this.preco;
     }
 
@@ -32,4 +29,11 @@ public class Produto {
     public int getDesconto(){
         return this.desconto;
     }
+
+    public String anuncio(){
+        return String.format("%s: de %d por APENAS R$ %d!", this.nome, this.preco + this.preco * this.desconto / 100, this.preco);
+    }
+
+    // Nao, pois o desconto interfere no preço e fica com uma dupla interpretacao em relação ao preco
+    // o preco real e o preco com desconto
 }
