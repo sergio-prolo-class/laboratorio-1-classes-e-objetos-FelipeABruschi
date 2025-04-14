@@ -2,8 +2,14 @@ package ifsc.poo;
 
 public class Produto {
     private String nome;
-    private int preco = 0;
-    private int desconto = 0;
+    private int preco;
+    private int desconto;
+
+    public Produto() {
+        this.nome = "";
+        this.preco = 0;
+        this.desconto = 0;
+    }
 
     public void setNome(String nome){
         this.nome = nome;

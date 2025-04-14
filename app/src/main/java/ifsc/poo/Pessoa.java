@@ -4,6 +4,11 @@ public class Pessoa {
     private String nome;
     private int idade;
 
+    public Pessoa() {
+        this.nome = "";
+        this.idade = 0;
+    }
+
     public void setNome(String nome) {
         if(!nome.isEmpty())
             this.nome = nome;

@@ -12,11 +12,20 @@ public class Livro {
         this.nome = nome;
     }
 
+    public String getNome(){
+        return this.nome;
+    }
+
     public void setAutor(String autor){
         this.autor = autor;
     }
 
+    public String getAutor(){
+        return this.autor;
+    }
+
     private boolean generos(String genero){
+
         String[] generos = {"fantasia", "aventura", "romance", "misterio", "terror", "autoajuda", "pedagogico"};
         boolean valido = true;
         for(int i = 0; i < 6; i++){
@@ -39,5 +48,9 @@ public class Livro {
 
     public void setTotal_paginas(int total){
         this.total_paginas = total;
+    }
+
+    public int getTotal_paginas(){
+        return this.total_paginas;
     }
 }

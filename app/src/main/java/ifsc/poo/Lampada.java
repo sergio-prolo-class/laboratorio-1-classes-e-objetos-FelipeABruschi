@@ -3,6 +3,10 @@ package ifsc.poo;
 public class Lampada {
     private boolean ligado;
 
+    public Lampada() {
+        ligado = false;
+    }
+
     public void ligar(){
         this.ligado = true;
     }
