@@ -96,25 +96,75 @@ public class App {
 
         //Exercicio 5
 
-        Produto geladeira = new Produto();
-        Produto microondas = new Produto();
+//        Produto geladeira = new Produto();
+//        Produto microondas = new Produto();
+//
+//        geladeira.setNome("Geladeira");
+//        microondas.setNome("Micro ondas");
+//
+//        geladeira.setPreco(832);
+//        microondas.setPreco(499);
+//
+//        System.out.println(geladeira.getPreco());
+//        System.out.println(microondas.getPreco());
+//
+//        geladeira.setDesconto(6);
+//        microondas.setDesconto(12);
+//
+//        System.out.println(geladeira.getPreco());
+//        System.out.println(microondas.getPreco());
+//
+//        System.out.println(geladeira.anuncio());
+//        System.out.println(microondas.anuncio());
 
-        geladeira.setNome("Geladeira");
-        microondas.setNome("Micro ondas");
+        //Exercicio 6
 
-        geladeira.setPreco(832);
-        microondas.setPreco(499);
+        Livro livro = new Livro();
 
-        System.out.println(geladeira.getPreco());
-        System.out.println(microondas.getPreco());
+        livro.setTitulo("O Senhor dos Anéis - A Sociedade do Anel");
+        System.out.printf("Titulo: %s\n", livro.getTitulo());
 
-        geladeira.setDesconto(6);
-        microondas.setDesconto(12);
+        livro.setAutor("J. R. R. Tolkien");
+        System.out.printf("Autor: %s\n", livro.getAutor());
 
-        System.out.println(geladeira.getPreco());
-        System.out.println(microondas.getPreco());
+        livro.setTotal_paginas(464);
+        System.out.printf("total de paginas: %d\n", livro.getTotal_paginas());
 
-        System.out.println(geladeira.anuncio());
-        System.out.println(microondas.anuncio());
+        livro.setCapitulo("Uma Festa Muito Esperada", 1);
+        livro.setCapitulo("A sombra do passado", 23);
+        livro.setCapitulo("Três é Demais", 44);
+        livro.setCapitulo("Um Atalho para Cogumelos", 66);
+        livro.setCapitulo("Uma Conspiração Desmascarada", 89);
+        livro.setCapitulo("A Floresta Velha", 110);
+        livro.setCapitulo("Em Casa de Tom Bombadil", 131);
+        livro.setCapitulo("Névoa nas Colinas dos Túmulos", 154);
+        livro.setCapitulo("No Pônei Empinado", 176);
+        livro.setCapitulo("Passolargo", 197);
+        livro.setCapitulo("Um Faca na Noite", 219);
+        livro.setCapitulo("Voo para o Vau", 240);
+        livro.setCapitulo("Muitos Encontros", 261);
+        livro.setCapitulo("O Conselho de Elrond", 282);
+        livro.setCapitulo("O Anel Vai para o Sul", 301);
+        livro.setCapitulo("Uma Jornada no Escuro", 320);
+        livro.setCapitulo("A Ponte de Khazad-dûm", 341);
+        livro.setCapitulo("Lothlórien", 361);
+        livro.setCapitulo("O Espelho de Galadriel", 383);
+        livro.setCapitulo("Adeus a Lórien", 403);
+        livro.setCapitulo("O Grande Rio", 423);
+        livro.setCapitulo("A Partida da Sociedade", 446);
+
+        livro.lerPaginas(90);
+
+        System.out.println(livro.getCapitulo());
+
+        livro.lerPaginas(300);
+
+        System.out.println(livro.getCapitulo());
+
+        livro.lerPaginas(100);
+
+        System.out.println(livro.getCapitulo());
+
+        livro.lerPaginas();
     }
 }
