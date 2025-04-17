@@ -27,7 +27,6 @@ public class Livro {
     }
 
     private boolean valida_genero(String genero){
-
         String[] generos = {"fantasia", "aventura", "romance", "misterio", "terror", "autoajuda", "pedagogico"};
         boolean valido = true;
         for(int i = 0; i < 7; i++){
@@ -38,6 +37,7 @@ public class Livro {
         }
         return valido;
     }
+
     public void setGenero(String genero){
         if(this.valida_genero(genero)) {
             this.genero[0] = genero;

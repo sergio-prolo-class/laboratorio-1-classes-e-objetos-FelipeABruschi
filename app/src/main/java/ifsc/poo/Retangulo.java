@@ -4,23 +4,38 @@ public class Retangulo {
     private float largura;
     private float altura;
 
+    private static Retangulo maior_area;
+    private static Retangulo menor_perimetro;
+
     private Retangulo() {
-        this.largura = 0;
-        this.altura = 0;
+        this.largura = 1;
+        this.altura = 1;
     }
 
-    public void setLargura(float largura){
-        if(largura > 0)
+    public boolean setLargura(float largura){
+        boolean valida;
+        if(largura > 0) {
             this.largura = largura;
-        else
-            System.out.println("Apenas valores positivos!");
+            valida = true;
+        }
+        else {
+            this.largura = 1;
+            valida = false;
+        }
+        return valida;
     }
 
-    public void setAltura(float altura){
-        if(altura > 0)
+    public boolean setAltura(float altura){
+        boolean valida;
+        if(altura > 0) {
             this.altura = altura;
-        else
-            System.out.println("Apenas valores positivos!");
+            valida = true;
+        }
+        else {
+            this.altura = 1;
+            valida = false;
+        }
+        return valida;
     }
 
     public float getArea(){
