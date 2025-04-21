@@ -29,70 +29,73 @@ public class App {
 //
 //        mostrar_lampada(lampada1);
 //        mostrar_lampada(lampada2);
+//
+//        Lampada lampada3 = new Lampada();
+//        System.out.printf("Lampadas criadas: %d\n", Lampada.getLampadasCriadas());
 
         //Exercicio 2 pessoa
-//        Pessoa pessoa1 = new Pessoa();
-//        Pessoa pessoa2 = new Pessoa();
+//        Pessoa pessoa1 = new Pessoa("");
+//        Pessoa pessoa2 = new Pessoa("Felipe", "191.234.001-41");
+//        Pessoa pessoa3 = new Pessoa("Bruno", 25, "001.211.877-55");
 //
-//        pessoa1.setNome("Alice");
-//        pessoa1.setIdade(22);
-//        pessoa2.setNome("Bruno");
-//        pessoa2.setIdade(25);
+//        if(pessoa1.setNome("Alice"))
+//            System.out.println("nome criado");
+//        else
+//            System.out.println("nome invalido");
+//        System.out.println(pessoa1.getNome());
+//        System.out.println(pessoa2.getNome());
+//        System.out.println(pessoa3.getNome());
 //
-//        pessoa2.felizAniversario();
-//        pessoa2.felizAniversario();
-//        pessoa2.felizAniversario();
+//        System.out.println(pessoa1.getCpf());
+//        System.out.println(pessoa2.getCpf());
+//        System.out.println(pessoa3.getCpf());
 //
+//        if(pessoa1.setIdade(22))
+//            System.out.println("Idade definida");
+//        else
+//            System.out.println("idade invalida");
 //        System.out.println(pessoa1.getIdade());
 //        System.out.println(pessoa2.getIdade());
+//        System.out.println(pessoa3.getIdade());
 //
-//        pessoa1.setIdade(-44);
-//        System.out.println(pessoa1.getIdade());
-//
-//        pessoa2.setNome("");
-//        System.out.println(pessoa2.getNome());
+//        pessoa2.felizAniversario();
+//        System.out.println(pessoa2.getIdade());
 
         //Exercicio 3 Retangulo
 
-//        Retangulo retangulo = new Retangulo();
+//        Retangulo retangulo1 = new Retangulo(7, 8);
+//        Retangulo retangulo2 = new Retangulo(2, 6);
+//        Retangulo retangulo3 = new Retangulo(9, 3);
 //
-//        retangulo.setAltura(4);
-//        retangulo.setLargura(5);
+//        if(retangulo1.setAltura(4))
+//            System.out.println("Altura deinifida");
+//        else
+//            System.out.println("Altura precisa ser positiva");
 //
-//        System.out.println(retangulo.getArea());
-//        System.out.println(retangulo.getPerimetro());
+//        if(retangulo1.setLargura(5))
+//            System.out.println("largura definida");
+//        else
+//            System.out.println("largura precisa ser positiva");
 //
-//        Retangulo[] retangulos = new Retangulo[10];
+//        System.out.println(retangulo1.getArea());
+//        System.out.println(retangulo1.getPerimetro());
 //
-//        float maior_razao = 0;
-//
-//        for(int i = 0; i < 10; i++){
-//            retangulos[i] = new Retangulo();
-//            retangulos[i].setLargura(numero());
-//            retangulos[i].setAltura(numero());
-//            if(maior_razao < (retangulos[i].getArea() / retangulos[i].getPerimetro()))
-//                maior_razao = (retangulos[i].getArea() / retangulos[i].getPerimetro());
-//        }
-//        System.out.println(maior_razao);
+//        System.out.println(Retangulo.maior_area.getArea());
+//        System.out.println(Retangulo.menor_perimetro.getPerimetro());
 
         //Exercicio 4
 
-//        Relogio relogio = new Relogio();
-//        relogio.ajustarHora((byte)14, (byte)58, (byte)32);
-//        relogio.avancaMinuto();
-//        relogio.avancaMinuto();
-//
-//        System.out.println(relogio.getHora());
-//
-//        relogio.ajustarHora((byte)23, (byte)59, (byte)59);
-//        relogio.avancaSegundo();
-//
-//        System.out.println(relogio.getHora());
-//
-//        relogio.ajustarHora((byte)11, (byte)30, (byte)45);
-//        System.out.println(relogio.getHour());
-//        relogio.avancaHora();;
-//        System.out.println(relogio.getHour());
+        Relogio relogio1 = new Relogio((byte)5);
+        Relogio relogio2 = new Relogio((byte)6, (byte)43);
+        Relogio relogio3 = new Relogio((byte)2, (byte)55, (byte)13);
+
+        relogio1.sincroniza(relogio2);
+
+        System.out.println(relogio1.getHora());
+        System.out.println(relogio2.getHora());
+        System.out.println(relogio3.getHora());
+
+        System.out.println(relogio3.diferenca(relogio2));
 
         //Exercicio 5
 
@@ -119,52 +122,52 @@ public class App {
 
         //Exercicio 6
 
-        Livro livro = new Livro();
-
-        livro.setTitulo("O Senhor dos Anéis - A Sociedade do Anel");
-        System.out.printf("Titulo: %s\n", livro.getTitulo());
-
-        livro.setAutor("J. R. R. Tolkien");
-        System.out.printf("Autor: %s\n", livro.getAutor());
-
-        livro.setTotal_paginas(464);
-        System.out.printf("total de paginas: %d\n", livro.getTotal_paginas());
-
-        livro.setCapitulo("Uma Festa Muito Esperada", 1);
-        livro.setCapitulo("A sombra do passado", 23);
-        livro.setCapitulo("Três é Demais", 44);
-        livro.setCapitulo("Um Atalho para Cogumelos", 66);
-        livro.setCapitulo("Uma Conspiração Desmascarada", 89);
-        livro.setCapitulo("A Floresta Velha", 110);
-        livro.setCapitulo("Em Casa de Tom Bombadil", 131);
-        livro.setCapitulo("Névoa nas Colinas dos Túmulos", 154);
-        livro.setCapitulo("No Pônei Empinado", 176);
-        livro.setCapitulo("Passolargo", 197);
-        livro.setCapitulo("Um Faca na Noite", 219);
-        livro.setCapitulo("Voo para o Vau", 240);
-        livro.setCapitulo("Muitos Encontros", 261);
-        livro.setCapitulo("O Conselho de Elrond", 282);
-        livro.setCapitulo("O Anel Vai para o Sul", 301);
-        livro.setCapitulo("Uma Jornada no Escuro", 320);
-        livro.setCapitulo("A Ponte de Khazad-dûm", 341);
-        livro.setCapitulo("Lothlórien", 361);
-        livro.setCapitulo("O Espelho de Galadriel", 383);
-        livro.setCapitulo("Adeus a Lórien", 403);
-        livro.setCapitulo("O Grande Rio", 423);
-        livro.setCapitulo("A Partida da Sociedade", 446);
-
-        livro.lerPaginas(90);
-
-        System.out.println(livro.getCapitulo());
-
-        livro.lerPaginas(300);
-
-        System.out.println(livro.getCapitulo());
-
-        livro.lerPaginas(100);
-
-        System.out.println(livro.getCapitulo());
-
-        livro.lerPaginas();
+//        Livro livro = new Livro();
+//
+//        livro.setTitulo("O Senhor dos Anéis - A Sociedade do Anel");
+//        System.out.printf("Titulo: %s\n", livro.getTitulo());
+//
+//        livro.setAutor("J. R. R. Tolkien");
+//        System.out.printf("Autor: %s\n", livro.getAutor());
+//
+//        livro.setTotal_paginas(464);
+//        System.out.printf("total de paginas: %d\n", livro.getTotal_paginas());
+//
+//        livro.setCapitulo("Uma Festa Muito Esperada", 1);
+//        livro.setCapitulo("A sombra do passado", 23);
+//        livro.setCapitulo("Três é Demais", 44);
+//        livro.setCapitulo("Um Atalho para Cogumelos", 66);
+//        livro.setCapitulo("Uma Conspiração Desmascarada", 89);
+//        livro.setCapitulo("A Floresta Velha", 110);
+//        livro.setCapitulo("Em Casa de Tom Bombadil", 131);
+//        livro.setCapitulo("Névoa nas Colinas dos Túmulos", 154);
+//        livro.setCapitulo("No Pônei Empinado", 176);
+//        livro.setCapitulo("Passolargo", 197);
+//        livro.setCapitulo("Um Faca na Noite", 219);
+//        livro.setCapitulo("Voo para o Vau", 240);
+//        livro.setCapitulo("Muitos Encontros", 261);
+//        livro.setCapitulo("O Conselho de Elrond", 282);
+//        livro.setCapitulo("O Anel Vai para o Sul", 301);
+//        livro.setCapitulo("Uma Jornada no Escuro", 320);
+//        livro.setCapitulo("A Ponte de Khazad-dûm", 341);
+//        livro.setCapitulo("Lothlórien", 361);
+//        livro.setCapitulo("O Espelho de Galadriel", 383);
+//        livro.setCapitulo("Adeus a Lórien", 403);
+//        livro.setCapitulo("O Grande Rio", 423);
+//        livro.setCapitulo("A Partida da Sociedade", 446);
+//
+//        livro.lerPaginas(90);
+//
+//        System.out.println(livro.getCapitulo());
+//
+//        livro.lerPaginas(300);
+//
+//        System.out.println(livro.getCapitulo());
+//
+//        livro.lerPaginas(100);
+//
+//        System.out.println(livro.getCapitulo());
+//
+//        livro.lerPaginas();
     }
 }

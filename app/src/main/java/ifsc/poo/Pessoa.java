@@ -5,7 +5,7 @@ public class Pessoa {
     private int idade;
     private String cpf;
 
-    private Pessoa(String cpf) {
+    public Pessoa(String cpf) {
         this.nome = "";
         this.idade = 0;
         if(!cpf.isEmpty())
@@ -13,7 +13,7 @@ public class Pessoa {
         else
             this.cpf = "123.456.789-00";    }
 
-    private Pessoa(String nome, String cpf) {
+    public Pessoa(String nome, String cpf) {
         this.nome = nome;
         this.idade = 0;
         if(!cpf.isEmpty())
@@ -22,7 +22,7 @@ public class Pessoa {
             this.cpf = "123.456.789-00";
     }
 
-    private Pessoa(String nome, int idade, String cpf) {
+    public Pessoa(String nome, int idade, String cpf) {
         this.nome = nome;
         this.idade = Math.max(idade, 0);
         if(!cpf.isEmpty())
@@ -59,6 +59,10 @@ public class Pessoa {
 
     public int getIdade() {
         return this.idade;
+    }
+
+    public String getCpf(){
+        return this.cpf;
     }
 
     public void felizAniversario(){

@@ -4,12 +4,12 @@ public class Lampada {
     private boolean ligado;
     private static int lampadas_criadas = 0;
 
-    private Lampada() {
+    public Lampada() {
         lampadas_criadas++;
         ligado = false;
     }
 
-    private Lampada(boolean estado) {
+    public Lampada(boolean estado) {
         this.ligado = estado;
         lampadas_criadas++;
     }
@@ -23,6 +23,11 @@ public class Lampada {
     public boolean verEstado(){
         return this.ligado;
     }
+
+    public static int getLampadasCriadas() {
+        return lampadas_criadas;
+    }
+
 }
 
 

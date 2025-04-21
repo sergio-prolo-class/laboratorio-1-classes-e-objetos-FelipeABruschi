@@ -4,12 +4,14 @@ public class Retangulo {
     private float largura;
     private float altura;
 
-    private static Retangulo maior_area;
-    private static Retangulo menor_perimetro;
+    public static Retangulo maior_area;
+    public static Retangulo menor_perimetro;
 
-    private Retangulo() {
-        this.largura = 1;
-        this.altura = 1;
+    public Retangulo(int altura, int largura) {
+        this.altura = Math.max(altura, 1);
+        this.largura = Math.max(largura, 1);
+
+        verifica_estaticos(this);
     }
 
     public boolean setLargura(float largura){
@@ -44,5 +46,12 @@ public class Retangulo {
 
     public float getPerimetro(){
         return 2 * (this.largura + this.altura);
+    }
+
+    public static void verifica_estaticos(Retangulo retangulo){
+        if(maior_area == null || retangulo.getArea() > maior_area.getArea())
+            maior_area = retangulo;
+        if(menor_perimetro == null || retangulo.getPerimetro() < menor_perimetro.getPerimetro())
+            menor_perimetro = retangulo;
     }
 }
