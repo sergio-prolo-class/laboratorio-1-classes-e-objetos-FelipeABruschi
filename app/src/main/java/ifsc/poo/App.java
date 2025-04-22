@@ -85,40 +85,32 @@ public class App {
 
         //Exercicio 4
 
-        Relogio relogio1 = new Relogio((byte)5);
-        Relogio relogio2 = new Relogio((byte)6, (byte)43);
-        Relogio relogio3 = new Relogio((byte)2, (byte)55, (byte)13);
-
-        relogio1.sincroniza(relogio2);
-
-        System.out.println(relogio1.getHora());
-        System.out.println(relogio2.getHora());
-        System.out.println(relogio3.getHora());
-
-        System.out.println(relogio3.diferenca(relogio2));
+//        Relogio relogio1 = new Relogio((byte)5);
+//        Relogio relogio2 = new Relogio((byte)6, (byte)43);
+//        Relogio relogio3 = new Relogio((byte)2, (byte)55, (byte)13);
+//
+//        relogio1.sincroniza(relogio2);
+//
+//        System.out.println(relogio1.getHora());
+//        System.out.println(relogio2.getHora());
+//        System.out.println(relogio3.getHora());
+//
+//        System.out.println(relogio3.diferenca(relogio2));
 
         //Exercicio 5
 
-//        Produto geladeira = new Produto();
-//        Produto microondas = new Produto();
-//
-//        geladeira.setNome("Geladeira");
-//        microondas.setNome("Micro ondas");
-//
-//        geladeira.setPreco(832);
-//        microondas.setPreco(499);
-//
-//        System.out.println(geladeira.getPreco());
-//        System.out.println(microondas.getPreco());
-//
-//        geladeira.setDesconto(6);
-//        microondas.setDesconto(12);
-//
-//        System.out.println(geladeira.getPreco());
-//        System.out.println(microondas.getPreco());
-//
-//        System.out.println(geladeira.anuncio());
-//        System.out.println(microondas.anuncio());
+        Produto geladeira = new Produto("geladeira", 832);
+        Produto microondas = new Produto("microondas", 499);
+        Produto ferro = new Produto("ferro", 220);
+        Produto fogao = new Produto("fogao", 750);
+        Produto prato = new Produto("prato", 60);
+        Produto frigobar = new Produto("frigobar", 560);
+
+        frigobar.setDesconto(6);
+
+        for(int i = 0; i < Produto.quantidade_produtos + 1; i++){
+            System.out.println(Produto.tabela_produtos()[i]);
+        }
 
         //Exercicio 6
 

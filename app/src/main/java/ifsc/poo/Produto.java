@@ -4,32 +4,60 @@ public class Produto {
     private String nome;
     private int preco;
     private int desconto;
+    private final String codigo;
 
-    public Produto() {
-        this.nome = "";
-        this.preco = 0;
+    public static int gera_codigo = 1;
+    public static int quantidade_produtos = 0;
+    public static Produto[] produtos = new Produto[50];
+    public static int indice_produto = 0;
+
+    public Produto(String nome, int preco) {
+        if(nome.isEmpty() || preco < 0)
+            throw new RuntimeException("Digite um nome e um preço válido.");
+        this.nome = nome;
+        this.preco = preco;
         this.desconto = 0;
+        if(quantidade_produtos < 50)
+            quantidade_produtos++;
+        this.codigo = String.format("CD: 000-%03d", gera_codigo);
+        gera_codigo++;
+        if(indice_produto == 50)
+            indice_produto = 0;
+        produtos[indice_produto] = this;
+        indice_produto++;
     }
 
-    public void setNome(String nome){
+    public String getCodigo(){
+        return this.codigo;
+    }
+
+    public boolean setNome(String nome){
+        if(nome.isEmpty())
+            return false;
         this.nome = nome;
+        return true;
     }
 
     public String getNome(){
         return this.nome;
     }
 
-    public void setPreco(int preco){
+    public boolean setPreco(int preco){
+        if(preco < 0)
+            return false;
         this.preco = preco;
+        return true;
     }
 
-    public int getPreco(){
-        return this.preco;
+    public float getPreco(){
+        return (float) (this.preco - this.preco * this.desconto / 100);
     }
 
-    public void setDesconto(int desconto){
+    public boolean setDesconto(int desconto){
+        if(desconto < 0)
+            return false;
         this.desconto = desconto;
-        this.preco -= preco * this.desconto / 100;
+        return true;
     }
 
     public int getDesconto(){
@@ -37,9 +65,14 @@ public class Produto {
     }
 
     public String anuncio(){
-        return String.format("%s: de %d por APENAS R$ %d!", this.nome, this.preco + this.preco * this.desconto / 100, this.preco);
+        return String.format("%s: de %d por APENAS R$ %.2f!", this.nome, this.preco, this.getPreco());
     }
 
-    // Nao, pois o desconto interfere no preço e fica com uma dupla interpretacao em relação ao preco
-    // o preco real e o preco com desconto
+    public static String[] tabela_produtos(){
+        String[] tabela = new String[51];
+        tabela[0] = "Código;Nome;Preço;Desconto";
+        for(int i = 0, j = 1; i < quantidade_produtos; i++, j++)
+            tabela[j] = produtos[i].codigo + ";" + produtos[i].nome + ";" + produtos[i].preco + ";" + produtos[i].desconto;
+        return tabela;
+    }
 }
